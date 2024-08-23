@@ -5,8 +5,8 @@ const operacao = {
     segundoValor: "",
     resultado: null,
 };
-const buttons = document.querySelectorAll(".btn__calc");
-const input = document.querySelector(".container__input");
+const buttons = document.querySelectorAll(".button");
+const input = document.querySelector(".input");
 const operadors = ["/", "*", "-", "+"];
 const features = ["Clear", "Backspace", "=", "%"];
 buttons.forEach((btn) => {

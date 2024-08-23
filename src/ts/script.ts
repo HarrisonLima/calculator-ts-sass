@@ -13,9 +13,9 @@ const operacao: IOperacao = {
 };
 
 const buttons: NodeListOf<HTMLButtonElement> =
-  document.querySelectorAll(".btn__calc");
+  document.querySelectorAll(".button");
 const input: HTMLInputElement | null =
-  document.querySelector(".container__input");
+  document.querySelector(".input");
 
 const operadors: string[] = ["/", "*", "-", "+"];
 const features: string[] = ["Clear", "Backspace", "=", "%"];
