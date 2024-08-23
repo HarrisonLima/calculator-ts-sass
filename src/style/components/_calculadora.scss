@@ -1,44 +1,50 @@
-@use "../abstract/variables";
-
 .calculadora {
   align-items: center;
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  width: 100vw;
-}
+  border: solid 0.125rem $color-gray-400;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba($color-gray-400, 0.12);
+  transition: all 0.3s ease-in-out;
 
-.calculadora__titulo {
-  animation: changeColor 4s infinite;
-  background-color: transparent;
-  color: variables.$color-white;
-  cursor: default;
-  display: flex;
-  font-size: 3.5rem;
-  gap: 10px;
-  font-weight: 700;
-  transition: 0.4s;
-}
-
-.calculadora__titulo:hover>span:nth-child(even) {
-  transition: 0.4s;
-  transform: translateY(0.5em);
-}
-
-@keyframes changeColor {
-  0%,
-  100% {
-    text-shadow: 0px 2px 24px variables.$color-white;
+  &:hover {
+    box-shadow: 0 0.25rem 1rem rgba($color-gray-400, 0.24);
+    transform: scale(1.1);
   }
-  50% {
-    text-shadow: 0px 2px 24px variables.$color-orange;
-  }
-}
 
-.calculadora__content {
-  align-items: center;
-  display: flex;
-  gap: 20px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 3.5rem;
+
+    @include respond(widescreen) {
+      padding: 3.5rem 4rem;
+      gap: 2.5rem;
+    }
+
+    @include respond(tab-land) {
+      padding: 2.5rem 3rem;
+      gap: 1.5rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    &__digits {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+
+      @include respond(phone) {
+        gap: 0.75rem;
+      }
+
+      :nth-child(3) {
+        grid-column: 3 / 5;
+        grid-row: 1;
+      }
+    }
+  }
 }

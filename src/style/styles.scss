@@ -1,6 +1,12 @@
-@use './abstract/root';
+@import "./abstract/variables";
+@import "./abstract/mixins";
 
-@use './components/calculadora';
-@use './components/modal_calculadora';
-@use './components/footer';
-@use './components/buttons';
+@import "./base/root";
+
+@import "./components/button";
+@import "./components/calculadora";
+@import "./components/input";
+
+@import "./layout/footer";
+
+@import "./pages/index";

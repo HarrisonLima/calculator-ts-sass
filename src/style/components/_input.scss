@@ -1,0 +1,30 @@
+.input {
+  background: transparent;
+  border: 0.0625rem solid $color-gray-400;
+  border-radius: 0.25rem;
+  color: $color-gray-300;
+  font-size: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: right;
+  transition: all 0.3s ease-in-out;
+
+  @include respond(widescreen) {
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  @include respond(tab-land) {
+    font-size: 1rem;
+    padding: .75rem 1rem;
+  }
+
+  &::placeholder {
+    color: $color-gray-300;
+  }
+
+  &:hover {
+    border-color: $color-gray-300;
+    box-shadow: 0 0.25rem 1rem rgba($color-gray-300, 0.24);
+  }
+}
