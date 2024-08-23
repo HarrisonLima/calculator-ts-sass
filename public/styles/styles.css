@@ -12,9 +12,7 @@ body {
 }
 
 .button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: solid 0.0625rem transparent;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -144,9 +142,6 @@ body {
     padding: 0.75rem 1rem;
   }
 }
-.input::-moz-placeholder {
-  color: #e0e0e0;
-}
 .input::placeholder {
   color: #e0e0e0;
 }
@@ -227,4 +222,4 @@ body {
   display: flex;
   height: 100vh;
   justify-content: center;
-}/*# sourceMappingURL=styles.css.map */
+}

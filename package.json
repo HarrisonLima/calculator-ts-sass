@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "watch": "tsc --watch" 
+    "watch": "tsc --watch",
+    "build:scss": "sass src/style:public/styles --no-source-map",
+    "watch:scss": "sass --watch src/style:public/styles --no-source-map"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.77.8",
     "typescript": "^5.4.2"
   }
 }
